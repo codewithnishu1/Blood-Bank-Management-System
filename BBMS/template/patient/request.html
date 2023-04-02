@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>Patient Request</title>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: white;
+            }
+            button{
+                background-color: #4CAF50;
+                width: 25%;
+                padding: 15px;
+                color: black;
+                border: none;
+                float: center;
+                font-size: 15px;
+            }
+            label{
+                font-size: 20px;
+            }
+            form{
+                border: 3px solid #f1f1f1;
+            }
+            input[type=email],input[type=text]{
+                width: 50%;
+                font-size: 15px;
+                margin: 8px 0px;
+                padding: 12px 20px;
+                display: inline-block;
+                border: 2px solid green;
+                box-sizing: border-box;
+            }
+            input[type=radio]{
+                height: 18px;
+                width: 18px;
+            }
+            button:hover{
+                opacity:0.7;
+
+            }
+            .container{
+                padding: 50px;
+                background-color: white;
+            }
+            .imgcontainer {
+                text-align: center;
+                margin: 24px 0 12px 0;
+            }
+
+            img.avatar {
+                width: 10%;
+                border-radius: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <center><h1>Register From</h1></center>
+        <form action="http://localhost:8000/patient/make_request/" method="post">
+            <center><div class="container">
+                <label for='patient-name'><b>Patient Name : </b></label>
+		        <input type='text' placeholder="Enter your name" name='patient-name' required><br>
+
+		        <label for='patient-email'><b>Patient Email :</b></label>
+		        <input type='text' placeholder="Enter your Email" name='patient-email' required><br>
+
+            	<label for ='blood_group'><b>Blood Group :  </b></label>
+            	<input type="text" placeholder="Enter BloodGroup" name="patient-bgroup" float="right"  required><br>
+
+                <label for='unit'><b>Blood Unit : </b></label>
+		        <input type='text' placeholder="Enter Blood Unit" name='patient-unit' required><br>
+
+            	<button type="submit"><b>Request</b></button><br>
+            </div></center>
+        </form>
+    </body>
+</html>
